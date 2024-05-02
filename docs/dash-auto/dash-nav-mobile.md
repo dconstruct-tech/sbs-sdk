@@ -1,8 +1,4 @@
 <style>
-    a:hover {
-        text-decoration: underline;
-    }
-
     .instructions-div {
         display: flex; 
         align-items: center; 
@@ -171,7 +167,7 @@ Toggle on and off or adjust the contour level to adjust contour sensitivity.
 ![Contour Visualisations](img/dash-nav-mobile/contour.png){style="width: 600px;"}
 
 #### 4.3 Example of a bad map visualization
-The View Tab allows you to customise your map-viewing experience within the application. It provides you with the flexibility to configure the settings according to your preferences. While keeping the default settings is perfectly acceptable, it's recommended to adjust the thumbs in a way that ensures the floor of the map is visible, the ceiling is hidden, and artefacts remain visible for optimal viewing.'
+The View Tab allows you to customise your map-viewing experience within the application. It provides you with the flexibility to configure the settings according to your preferences. While keeping the default settings is perfectly acceptable, it's recommended to adjust the thumbs in a way that ensures the floor of the map is visible, the ceiling is hidden, and artefacts remain visible for optimal viewing.
 
 ![Bad Visualisations Example](img/dash-nav-mobile/bad-visualization.jpg){style="width: 600px;"}
 
@@ -183,47 +179,13 @@ This way, we can better see where our robot is located on the map when we run a 
 
 ---
 
-### 5. Ready Tab
-Within this tab, you will find all the functions for managing the robot's live video camera streaming, taking manual control of your robot, and localisation, which is essential for the 'Plan' tab. 
-
-#### 5.1 Live video streaming 
-To see your robot's camera view, select or toggle the camera options here. This can be found in the options menu on the right. 
-![Camera View GIF](img/dash-nav-mobile/camera-view.gif){style="width: 600px;"}
-
-You can also enlarge the camera view by pressing the enlarge button on the top left corner and adjusting the size to your preference. 
-
-#### 5.2 Manually controlling your robot 
-![Manual Control Mode Switch](img/dash-nav-mobile/control-mode-switch-page.png){style="width: 800px;"}
-
-| Instructions |
-| ------- | 
-| <div class="instructions-div"><div class="instruction-circle">1</div><p style="margin: 0; margin-left: 5px;">To move your robot, switch the control mode at the bottom of the application to 'Manual' mode.</p></div><font size='2'>Ensure that you are on the 'Ready' tab.|
-| <div class="instructions-div"><div class="instruction-circle">2</div><p style="margin: 0; margin-left: 5px;"> Use the joysticks at the bottom to move your robot. </p></div><font size="2">The joystick on the left is used to move the robot front and backwards, while the joystick on the right is used to turn the robot left and right.|
-
-#### 5.3 Localising your robot 
-
-Before delving into the features in the planning tab, it is essential to establish an initial pose estimate to localise your robot. Localisation is a crucial step for the robot to accurately determine its position within the provided point cloud map. This process is a prerequisite for enabling autonomy on the robot.
-
-| Instructions |
-| ------- | 
-| <div class="instructions-div"><div class="instruction-circle">1</div><p style="margin: 0; margin-left: 5px;">Inside the options panel of the 'Ready' tab, press the 'Localise' button.</p></div>![Localize Button](img/dash-nav-mobile/localize-button.png){style="margin-top: 10px; width: 1000px;"}<br><font size='2'>Here, you can also find your robot status and see information like the battery level, localisation and stance.|
-| <div class="instructions-div"><div class="instruction-circle">2</div><p style="margin: 0; margin-left: 5px;">Localise the robot by matching the point cloud of the current lidar scan to the map.</p></div><font size="2"> Use the following buttons to help you achieve a good localisation.<br>![Localize Button Options](img/dash-nav-mobile/localize-buttons-options.png){style="width: 400px;margin-top: 10px;"}<br>Set Initial Pose: Press on the point of the map where the robot is located and drag it to the direction it is facing.<br> Rotate Pose: Used to adjust the rotation of the robot's LiDAR scan.<br>Move Pose: Used to move the robot's LiDAR scan around the map.<br> Reset Pose: Resets your current localisation. <br> Done Button: Saves your current localisation.<br><br> To localize your robot, start by selecting the 'Set Initial Pose' button. Press on the point of the map where the robot is located and drag it to the direction it is facing. After which, you will be directed to the 'Move Pose' mode where you can use the directional arrows adjust the robot's LiDAR point cloud to fit the map as shown in the example below.<br> ![Localize Demo GIF](img/dash-nav-mobile/localize-demo.gif){style="margin-top: 10px;"}<br>Additionally, you can use 'Rotate Pose' to rotate the LiDAR point cloud to make fitting it to the map easier.<br>![Localize Rotation](img/dash-nav-mobile/localize_rotation.gif){style="margin-top: 10px;"}<br> Refer to the examples below for instances of successful robot localisation. You may also refer to the 'Robot Status' section where the localisation result is shown. ![Localisation Examples](img/dash-nav-mobile/localisation.png){style="margin-top: 10px;"}The localisation of the robot is good when the robot's current LiDAR scan (white points) is aligned well to the map, meaning it has a good initial pose estimate. The localisation on the other two examples are bad as the LiDAR scan does not line up with the map, and the robot is in the wrong position.|
-| <div class="instructions-div"><div class="instruction-circle">3</div><p style="margin: 0; margin-left: 5px;">Bring down the plane of the map.</p></div><font size="2"> Using the slider on the left, adjust the map plane such that the floor of the map is now visible.|
-| <div class="instructions-div"><div class="instruction-circle">4</div><p style="margin: 0; margin-left: 5px;">Once you are done with setting your robot's initial pose estimate, select the 'Done' button.</p></div><font size="2"> On the other hand, if you would like to restart the localisation process, press on the 'Reset Pose' button.|
-
-Upon submitting the initial pose estimate, the robot will attempt to determine its current position on the map. During this process, there may be a momentary "jump" in the robot's position. You are advised to manually move the robot around using the robot's controller to ensure that the LiDAR point cloud is still aligned with the map. 
-
-Redo the localisation process if the LiDAR point cloud no longer aligns with your map. 
-
----
-
-### 6. Plan Tab
+### 5. Plan Tab
 The plan tab is used for preparing routes for your robots to follow and perform BLK scans.
 
 ![Plan Tab View](img/dash-nav-mobile/plan-tab.png){style="margin-top: 10px; width: 1000px;"}
 
-#### 6.1 Creating your route
-Before starting, ensure that you have our localised your robot to the map. Refer to [Section 5.3](#section5_3) if you require a guide to localise your robot onto the map. 
+#### 5.1 Creating your route
+Before starting, ensure that you have our localised your robot to the map. Refer to [Section 6.3](#section6_3) if you require a guide to localise your robot onto the map. 
 
 At the bottom right corner of your screen, select on the 'Add Route' button.
 
@@ -233,7 +195,7 @@ Give your new route a name. It is advised to use a name that is descriptive and 
 
 ![Add New Route](img/dash-nav-mobile/add-new-route.jpg){style="width: 300px; margin-top: 10px;"}
 
-#### 6.1.1 Create routes by manually controlling of your robot
+#### 5.1.1 Create routes by manually controlling of your robot
 From the list of routes on the right side, select the route that you have just created and press the 'Record Route' button boxed in red to record your route. 
 ![Record Route Button](img/dash-nav-mobile/record-route-button.png){style="margin-top: 10px; width: 1000px;"}
 
@@ -246,7 +208,7 @@ After moving your robot, you should see a blue-coloured path being formed by the
 
 Once you are finished with setting your route, press 'Save Recorded Route' at the bottom of the screen and you will be directed back to the routes page with your new route saved. Now, you will be able to make your robot run the route you have created. Refer to [Section 6.3](#section6_3).
 
-#### 6.1.2 Create routes by plotting waypoints on the map
+#### 5.1.2 Create routes by plotting waypoints on the map
 From the list of routes on the right side, select the route that you have just created and press this button boxed in red to record your route. 
 
 ![Edit Waypoint Button](img/dash-nav-mobile/edit-waypoint-route-button.png){style="width: 1000px; margin-top: 10px;"}
@@ -280,11 +242,11 @@ If you would like to move one of your waypoints, select the 'Move Mode' button a
 
 Once you are finished with plotting your route, select the 'Done' button on the left of the mode buttons. Now, you will be able to make your robot run the route you have created. Refer to [Section 6.3](#section6_3).
 
-#### 6.1.3 BLK Scanning
+#### 5.1.3 BLK Scanning
 Before setting BLK scan points, you can configure your LiDAR configurations depending on your use case. 
 ![BLK Scan View](img/dash-nav-mobile/blk-scan-view.png){style="width: 1000px; margin-top: 10px;"}
 
-#### 6.1.3.1 BLK Configurations
+#### 5.1.3.1 BLK Configurations
 ##### LiDAR Scan Quality
 
 LiDAR Scan Quality affects the density of the data points generated in your point cloud map. 
@@ -307,7 +269,7 @@ LiDAR Scan Quality affects the density of the data points generated in your poin
 
 ![Functionality Icon](img/dash-nav-mobile/pointer.png){style="height:20px;"} HDR (High Dynamic Range): More detail in both highlights and shadows can be captured. 
 
-#### 6.1.3.2 Auto generation of scan points
+#### 5.1.3.2 Auto generation of scan points
 In this section, you can automatically generate BLK scanning points in your route based on the distance travelled by the robot.
 To use this, you must already have a route with waypoints. If you do not have one, refer to [Section 6.1.1](#section6_1_1) for a guide on recording your waypoints by manually controlling your robot or refer to [Section 6.1.2](#section6_1_2) for a guide on creating your route by manually plotting waypoints.
 
@@ -317,22 +279,57 @@ The generated blinking points on the map is where your robot will apply a BLK sc
 
 To clear all BLK scanning points, select 'Clear all Scan Points' in the options menu. 
 
-#### 6.1.3.3 Manually setting scan points
+#### 5.1.3.3 Manually setting scan points
 To use this, you must already have a route with waypoints. If you do not have one, refer to [Section 6.1.1](#section6_1_1) for a guide on recording your waypoints by manually controlling your robot or refer to [Section 6.1.2](#section6_1_2) for a guide on creating your route by manually plotting waypoints.
 Select the Scan Mode button at the bottom of the screen, and press the waypoints where you want your robot to perform a BLK scan. 
 ![Manual Select Scan Points GIF](img/dash-nav-mobile/manual-select-scan-points.gif){style="margin-top: 10px;"}
 
-#### 6.2 Editing or deleting your routes
+#### 5.2 Editing or deleting your routes
 Navigate to the right-hand side, where you'll find a list of the routes you've created. To edit or delete any of these routes, press and hold on the desired route. This action will reveal options such as rename, copy, and delete at the bottom of the screen.
 ![Edit Route GIF](img/dash-nav-mobile/edit-route.gif){style="margin-top: 10px;"}
 
-#### 6.3 Running your routes
+#### 5.3 Running your routes
 | Instructions |
 | ------- | 
 | <div class="instructions-div"><div class="instruction-circle">1</div><p style="margin: 0; margin-left: 5px;">Select the route that you would like to run.</p></div><font size='2'>You can find your routes in the routes section of the 'Plan' tab.|
 | <div class="instructions-div"><div class="instruction-circle">2</div><p style="margin: 0; margin-left: 5px;">Once select, press the 'Set Route' button located at the bottom of the screen.</p></div><font size="2">![Run Route View](img/dash-nav-mobile/run-route-view.png){style="margin-top: 10px; width: 1000px;"}|
 | <div class="instructions-div"><div class="instruction-circle">3</div><p style="margin: 0; margin-left: 5px;">Switch to the 'Ready' tab and change the control mode to 'Auto'.</p></div>![Ready Tab Auto Toggle](img/dash-nav-mobile/running-route-ready-tab.png){style="width: 1000px; margin-top: 10px;"}|
 | <div class="instructions-div"><div class="instruction-circle">5</div><p style="margin: 0; margin-left: 5px;">Your robot will now run and follow the route that you've created.</p></div>|
+
+---
+
+### 6. Ready Tab
+Within this tab, you will find all the functions for managing the robot's live video camera streaming, taking manual control of your robot, and localisation, which is essential for the 'Plan' tab. 
+
+#### 6.1 Live video streaming 
+To see your robot's camera view, select or toggle the camera options here. This can be found in the options menu on the right. 
+![Camera View GIF](img/dash-nav-mobile/camera-view.gif){style="width: 600px;"}
+
+You can also enlarge the camera view by pressing the enlarge button on the top left corner and adjusting the size to your preference. 
+
+#### 6.2 Manually controlling your robot 
+![Manual Control Mode Switch](img/dash-nav-mobile/control-mode-switch-page.png){style="width: 800px;"}
+
+| Instructions |
+| ------- | 
+| <div class="instructions-div"><div class="instruction-circle">1</div><p style="margin: 0; margin-left: 5px;">To move your robot, switch the control mode at the bottom of the application to 'Manual' mode.</p></div><font size='2'>Ensure that you are on the 'Ready' tab.|
+| <div class="instructions-div"><div class="instruction-circle">2</div><p style="margin: 0; margin-left: 5px;"> Use the joysticks at the bottom to move your robot. </p></div><font size="2">The joystick on the left is used to move the robot front and backwards, while the joystick on the right is used to turn the robot left and right.|
+
+#### 6.3 Localising your robot 
+
+Before delving into the features in the planning tab, it is essential to establish an initial pose estimate to localise your robot. Localisation is a crucial step for the robot to accurately determine its position within the provided point cloud map. This process is a prerequisite for enabling autonomy on the robot.
+
+| Instructions |
+| ------- | 
+| <div class="instructions-div"><div class="instruction-circle">1</div><p style="margin: 0; margin-left: 5px;">Inside the options panel of the 'Ready' tab, press the 'Localise' button.</p></div>![Localize Button](img/dash-nav-mobile/localize-button.png){style="margin-top: 10px; width: 1000px;"}<br><font size='2'>Here, you can also find your robot status and see information like the battery level, localisation and stance.|
+| <div class="instructions-div"><div class="instruction-circle">2</div><p style="margin: 0; margin-left: 5px;">Localise the robot by matching the point cloud of the current lidar scan to the map.</p></div><font size="2"> Use the following buttons to help you achieve a good localisation.<br>![Localize Button Options](img/dash-nav-mobile/localize-buttons-options.png){style="width: 400px;margin-top: 10px;"}<br>Set Initial Pose: Press on the point of the map where the robot is located and drag it to the direction it is facing.<br> Rotate Pose: Used to adjust the rotation of the robot's LiDAR scan.<br>Move Pose: Used to move the robot's LiDAR scan around the map.<br> Reset Pose: Resets your current localisation. <br> Done Button: Saves your current localisation.<br><br> To localize your robot, start by selecting the 'Set Initial Pose' button. Press on the point of the map where the robot is located and drag it to the direction it is facing. After which, you will be directed to the 'Move Pose' mode where you can use the directional arrows adjust the robot's LiDAR point cloud to fit the map as shown in the example below.<br> ![Localize Demo GIF](img/dash-nav-mobile/localize-demo.gif){style="margin-top: 10px;"}<br>Additionally, you can use 'Rotate Pose' to rotate the LiDAR point cloud to make fitting it to the map easier.<br>![Localize Rotation](img/dash-nav-mobile/localize_rotation.gif){style="margin-top: 10px;"}<br> Refer to the examples below for instances of successful robot localisation. You may also refer to the 'Robot Status' section where the localisation result is shown. ![Localisation Examples](img/dash-nav-mobile/localisation.png){style="margin-top: 10px;"}The localisation of the robot is good when the robot's current LiDAR scan (white points) is aligned well to the map, meaning it has a good initial pose estimate. The localisation on the other two examples are bad as the LiDAR scan does not line up with the map, and the robot is in the wrong position.|
+| <div class="instructions-div"><div class="instruction-circle">3</div><p style="margin: 0; margin-left: 5px;">Bring down the plane of the map.</p></div><font size="2"> Using the slider on the left, adjust the map plane such that the floor of the map is now visible.|
+| <div class="instructions-div"><div class="instruction-circle">4</div><p style="margin: 0; margin-left: 5px;">Once you are done with setting your robot's initial pose estimate, select the 'Done' button.</p></div><font size="2"> On the other hand, if you would like to restart the localisation process, press on the 'Reset Pose' button.|
+
+Upon submitting the initial pose estimate, the robot will attempt to determine its current position on the map. During this process, there may be a momentary "jump" in the robot's position. You are advised to manually move the robot around using the robot's controller to ensure that the LiDAR point cloud is still aligned with the map. 
+
+
+---
 
 #### 7. Offline Mode
 If your scanning location does not have internet access, you can connect to your robot's hotspot through your device's Wi-Fi settings and use offline mode to login to your robot to carry out the same tasks as you would in online mode. To use this, you may follow the instructions below. 
